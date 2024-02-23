@@ -34,7 +34,7 @@ public class PrenotazioneService {
         prenotazione.setNumeroPosti(prenotazioneRequest.getNumeroPosti());
        if (prenotazione.getNumeroPosti()>=prenotazione.postiDisponibili()){
              throw new BadRequestException("I posti disponibili sono " + " " + prenotazione.postiDisponibili());}
-            else if (prenotazione.postiDisponibili()== 0 ) {
+            else if (evento.getNumeroPostiDisponibili()== 0 ) {
            throw new BadRequestException("non ci sono posti disponibili");
        }
              else {
